@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="../assets/stylesheets/unslider.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="menu col-xs-8">
+        <ul>
+          <li>
+            <%= link_to "Welcome", welcome_path() %>
+          </li>
+          <li>
+            <%= link_to "Portfolio", portfolio_path() %>
+          </li>
+          <li>
+            <%= link_to "Blog", "https://medium.com/", :target => "_blank" %>
+          </li>
+          <li>
+            <%= link_to "About", about_path() %>
+          </li>
+          <li>
+            <%= link_to "Contact", contact_path() %>
+          </li>
+        </ul>
+      </div>
+      <div class="name col-xs-4">
+        <h1>Rafael Montas</h1>
+      </div>
+    </div>
+  </div>
+</div>
+	<%= yield %>
+<div class="footer">
+  <div class="container">
+    <ul class="social_media">
+      <li>
+        <a class="github" href="#">
+        	<img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-256.png">
+        </a>
+      </li>
+      <li class="linkedin">
+      	<a href="#">
+        	<img src="https://cdn1.iconfinder.com/data/icons/simple-icons/4096/linkedin-4096-black.png">
+        </a>
+      </li>
+      <li class="twitter">
+      	<a href="#">
+        	<img src="http://plainicon.com/dboard/userprod/2802_db2aa/prod_thumb/plainicon.com-39782-512px.png">
+        </a>
+      </li>
+    </ul>
+    <p>&copy; 2016 Rafael Montas</p>
+  </div>
+</div>
+  
+<script   src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
+<script sr="../assets/javascripts/unslider.js"></script>
+  <script>
+		jQuery(document).ready(function($) {
+			$('.my-slider').unslider();
+		});
+	</script>
+</body>
+</html>
